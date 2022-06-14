@@ -1,0 +1,37 @@
+//Artis-Mickens, K
+// June 14, 2022
+// ------------------
+// Working with ES6 functions - - Week #006
+// Using forEach Loops
+// (Week 6 - CallBackFunctions: Using forEach Loops)
+// ------------------
+// Implement the createParagraph() function
+
+// Use forEach to create a single paragraph from a list of words.
+/*
+Your task in this activity is to implement a function called createParagraph that takes an array of strings, 
+and returns a single string containing all the items in the array separated by a space.
+*/
+
+//
+// MIT xPRO - Professional Certificate in Coding: Full Stack Development with MERN - April 2022
+//
+
+
+// This is a list of words
+let words = ['Loops', 'are', 'a', 'great', 'way', 'to', 'find', 'elements', 'in', 'an', 'array'];
+
+// TODO: implement this function to return a string containing all words in a paragraph.
+function createParagraph(words) {
+  let paragraph = '';
+  words.forEach((word) => paragraph+=word +" ");
+  return paragraph;
+}
+
+// Prints paragraph to console
+console.log(createParagraph(words));
+
+// don't change this line
+if (typeof module !== 'undefined') {
+  module.exports = createParagraph;
+}
