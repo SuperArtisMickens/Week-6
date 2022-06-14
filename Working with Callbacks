@@ -1,0 +1,61 @@
+//Artis-Mickens, K
+// June 14, 2022
+// ------------------
+// Working with ES6 functions - - Week #006
+// Working with Callbacksw
+// (Week 6 - CallBackFunctions: Working With Callbacks)
+// ------------------
+//
+// MIT xPRO - Professional Certificate in Coding: Full Stack Development with MERN - April 2022
+//
+
+
+
+//Working with Callbacks
+
+/*
+
+Your task in this activity is to create a function called filterArray that takes two arguments:
+
+myArray: An array of numbers.
+isEvenCallBack: A function that returns the Boolean true if a number is even, and returns false if it's odd.
+Your task is to implement the isEvenCallBack function and then pass it as a callback function into filterArray. 
+The function filterArray should then return an array containing only even numbers.
+
+Hint: There are comments in the callbacks.js file to help you through this task
+
+Check the results in your console. If your code works, it should print [2, 6, 12]
+
+*/
+
+
+// This is the array that contains numbers for you to work with
+var myArray = [1, 2, 5, 6, 12, 23, 15, 31];
+
+// This array should only contain even numbers
+var evenArray = [];
+
+// This code will call your function when the page loads up
+// Don't edit this function!
+window.onload = () => {
+  console.log(filterArray(myArray, isEvenCallBack));
+};
+
+function filterArray(myArray, isEvenCallBack) {
+  // TODO: use filterArray to determine if a number is even or odd.
+  //If the number is even, add it to the array 'evenArray'
+  const evenArray = myArray.filter(isEvenCallBack);
+  return evenArray;
+}
+
+// This function should return 'true' if a number is even and 'false' if a number is odd
+function isEvenCallBack(number) {
+  // TODO: use the mod operator (%) to determine if number is even or odd
+  let comparison = number %2 == 0;
+  return comparison;
+}
+
+// Do not edit code past this point
+if (typeof module !== 'undefined') {
+  module.exports = { filterArray, isEvenCallBack };
+}
